@@ -1,0 +1,16 @@
+#!/usr/bin/python
+
+import BaseHTTPServer as BaseHTTPServer
+import CGIHTTPServer as CGIHTTPServer
+import cgitb
+
+cgitb.enable()
+
+server = BaseHTTPServer.HTTPServer
+handler = CGIHTTPServer.CGIHTTPRequestHandler
+server_address = ("localhost",8000)
+
+handler.cgi_directories = ["/python-scripts"]
+
+httpd = server(server_address, handler)
+httpd.serve_forever()
