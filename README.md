@@ -15,7 +15,7 @@ To stop serving, simply type `Ctrl+c` in the terminal. The webserver will keep r
 
 * If you see a message like the following, you are probably using python2 instead of python3:
 
-  ```
+```
 $ python server.py
 Traceback (most recent call last):
   File "server.py", line 3, in <module>
