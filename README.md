@@ -13,6 +13,9 @@ To stop serving, simply type `Ctrl+c` in the terminal. The webserver will keep r
 
 #### Troubleshooting Common Issues
 
+* Make sure that the shebang at the top of `parseForm.py` contains the path to your installation of python3.
+i.e., replace the line `#!/usr/local/bin/python3` with `#!<this_is_where_my_python_lives`. If you don't know the path, issuing `which python` to find out. If you get a 501, this is likely the solution.
+
 * If you see a message like the following, you are probably using python2 instead of python3:
 
   ```
