@@ -1,9 +1,7 @@
-#!/usr/local/bin/python3
-
 import http.server
 import socketserver
 
-## A simple script to use the python CGI server.
+## A simple script to use the python CGI server in python3
 ## Using CGIHTTPRequestHandler in place of SimpleHTTPRequestHandler
 ## allows python scripts to be called as an action (POST)
 
@@ -11,7 +9,7 @@ import socketserver
 handler = http.server.CGIHTTPRequestHandler
 
 #point the handler to a directory with scripts
-handler.cgi_directories = ["/python-scripts"]
+handler.cgi_directories = ["/cgi-scripts"]
 
 # define the server usinh the handler
 PORT = 8000
@@ -20,6 +18,8 @@ httpd = socketserver.TCPServer(("localhost",PORT), handler)
 ## Set variables which the CGIHTTPRequestHandler expects
 httpd.server_name = "myServer"
 httpd.server_port = PORT
+
+print("staring server...")
 
 #run the server. To kill it, issue Ctrl + C
 httpd.serve_forever()

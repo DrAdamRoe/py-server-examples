@@ -1,4 +1,4 @@
-#!/usr/bin/python
+## A version of a CGI server in python2. Do not use.
 
 import BaseHTTPServer as BaseHTTPServer
 import CGIHTTPServer as CGIHTTPServer
@@ -10,7 +10,7 @@ server = BaseHTTPServer.HTTPServer
 handler = CGIHTTPServer.CGIHTTPRequestHandler
 server_address = ("localhost",8000)
 
-handler.cgi_directories = ["/python-scripts"]
+handler.cgi_directories = ["/cgi-scripts"]
 
 httpd = server(server_address, handler)
 httpd.serve_forever()

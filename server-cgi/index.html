@@ -1,0 +1,18 @@
+<html>
+<header><title>A super simple python CGI server</title>
+</header>
+<body>
+
+<p>
+  This is a super simple python CGI server. This page is rendered from a single HTML file with no CSS. </br>
+  When you enter text into the name field below, the client will use the HTML POST method to send that text back the server. </br>
+  The server will then call a python script which access the text, parses it, and sends a response as HTML, which the browser then renders.
+</p>
+<p>
+<form action="/cgi-scripts/parseForm.py" method="post">
+  Name: <input type="string" name="name">
+  <input type="submit" value="Send">
+</form>
+</p>
+</body>
+</html>
