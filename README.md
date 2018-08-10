@@ -1,5 +1,5 @@
 # py-server-examples
-Simple python server examples for demonstration and teaching. 
+Simple python web server examples for demonstration and teaching. 
 
 ### Usage
 
@@ -11,7 +11,11 @@ Simple python server examples for demonstration and teaching.
 
 This will serve at [http://localhost:8000/](http://localhost:8000/).
 
-To stop serving, simply type `Ctrl+c` in the terminal. The webserver will keep running if you don't explicitly kill it.
+To stop serving, simply type `Ctrl+c` in the terminal. The web server will keep running if you don't explicitly kill it.
+
+To run other implementations, kill the version you have open, `cd` into another directory, and run `python server.py`. 
+
+Note that these examples are all written for python3.   
 
 ## Server Implementations  
 The goal of this repo is to demonstrate various ways to set up a web server using Python, and to use some of the lower-level approaches to demonstrate what the server is doing. 
