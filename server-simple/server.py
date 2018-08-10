@@ -8,7 +8,7 @@ import socketserver
 handler = http.server.SimpleHTTPRequestHandler
 
 # define the server usinh the handler
-PORT = 8001
+PORT = 8000
 httpd = socketserver.TCPServer(("localhost",PORT), handler)
 
 ## Set variables which the CGIHTTPRequestHandler expects
