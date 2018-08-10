@@ -19,7 +19,7 @@ httpd = socketserver.TCPServer(("localhost",PORT), handler)
 httpd.server_name = "myServer"
 httpd.server_port = PORT
 
-print("staring server...")
+print("staring CGI server...")
 
 #run the server. To kill it, issue Ctrl + C
 httpd.serve_forever()
