@@ -1,9 +1,11 @@
-# py3gci
-A simple example python3 web server with CGI
+# py-server-examples
+Simple python server examples for demonstration and teaching. 
 
 ### Usage
 
+
 ```
+ cd server-wsgi
  python server.py
 ```
 
@@ -11,19 +13,27 @@ This will serve at [http://localhost:8000/](http://localhost:8000/).
 
 To stop serving, simply type `Ctrl+c` in the terminal. The webserver will keep running if you don't explicitly kill it.
 
-#### Troubleshooting Common Issues
+## Server Implementations  
+The goal of this repo is to demonstrate various ways to set up a web server using Python, and to use some of the lower-level approaches to demonstrate what the server is doing. 
 
-* Make sure that the shebang at the top of `parseForm.py` contains the path to your installation of python3.
-i.e., replace the line `#!/usr/local/bin/python3` with `#!<this_is_where_my_python_lives`. If you don't know the path, issuing `which python` to find out. If you get a 501, this is likely the solution.
+#### server-simple 
+The simple-server is quite rudimentary. An HTML form is rendered, and a server will log the user's input. This example represents a static internet. 
+Using this repo together with server-cgi, one can learn about GET and POST, and begin to understand what the client and server each do.
+The server-simple implementation makes use of `http.server.SimpleHTTPRequestHandler`. 
+   
+#### server-cgi 
+The simple-cgi is quite basic, making use of Common Gateway Interface (CGI). This was standard in the 1990's. Using CGI allows scripts to be run server-side. 
+In this example, the input from an HTML form is parsed by a server-side python script, which returns an HTML response, which is then rendered in the browser. 
+The server-simple implementation makes use of `http.server.CGIHTTPRequestHandler`. 
+CGI is an outdated methodology for web servers, which today is problematic in many ways. It is included here solely for demonstrative purposes, and should not be used.   
 
-* If you see a message like the following, you are probably using python2 instead of python3:
+#### server-wsgi
+The server-wsgi implementation gets us towards the state of the art, making use of Web Server Gateway Interface (WSGI).
+WSGI is a specification for an application and server to communicate with one another. The code is therefore more abstract than in the previous examples. 
+This example uses the reference implementation of the WSGI specification which ships with Python, called `wsgiref`.
+While one would generally _not_ use a "raw" implementation as is done here, modern python frameworks are built using this standard.
 
-```
-$ python server.py
-Traceback (most recent call last):
-  File "server.py", line 3, in <module>
-    import http.server
-ImportError: No module named http.server
-```
+       
 
-* If there is a port conflict, you can change the default port from 8000 to another port by simply changing the `PORT` variable in the script.
+ 
+
