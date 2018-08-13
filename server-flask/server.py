@@ -1,5 +1,5 @@
 ## hello world server example
-## adapated mostly from http://flask.pocoo.org/docs/1.0/quickstart/
+## adapted mostly from http://flask.pocoo.org/docs/1.0/quickstart/
 
 # Import Flask itself
 from flask import Flask
@@ -18,10 +18,6 @@ from flask import render_template
 @app.route('/test')
 def test():
     return render_template('test.html')
-
-# import URL library to resolve templates pointing to static resources
-from flask import url_for
-
 
 # simple page with inline CSS
 @app.route('/csstest')

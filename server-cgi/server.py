@@ -11,7 +11,7 @@ handler = http.server.CGIHTTPRequestHandler
 #point the handler to a directory with scripts
 handler.cgi_directories = ["/cgi-scripts"]
 
-# define the server usinh the handler
+# define the server using the handler
 PORT = 8000
 httpd = socketserver.TCPServer(("localhost",PORT), handler)
 
