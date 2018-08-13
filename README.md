@@ -38,8 +38,19 @@ This example uses the reference implementation of the WSGI specification which s
 While one would generally _not_ use a "raw" implementation as is done here, modern python frameworks are built using this standard.
 
 #### server-flask 
+This example with the Flask framework is another step towards a usable website setup. 
+Flask does a lot of the "ugly" things behind the scenes, and sets you up to think about content. 
+Behind the scenes, Flask is also using WSGI. The development server of flask is again state of the art, 
+and it is not secure. It is _not_ to be used in any live website. This is for demonstration purposes only. 
+The first few lines of `server-flask/server.py`, ending with the line `return 'hello, flask.'`, 
+represents the entirety of a "hello world" with flask. Behind the scenes, it is running a server, and doing a lot of 
+the work which has to be done by hand in the other server versions. 
+In order to enable the framework, some setup is required, as described in the steps below.  
+   
 
-To run flask, first you will have to [install flask](http://flask.pocoo.org/docs/1.0/installation/#installation). 
+
+
+To run `server-flask`, first you will have to [install flask](http://flask.pocoo.org/docs/1.0/installation/#installation). 
 Using Anaconda and PyCharm, the easiest way forward is to: 
 * Choose a Python environment in Anaconda and install Flask
 * In PyCharm, open Preferences/Settings --> Project --> Project Interpreter, and makes sure that the version of python which is installed 
@@ -49,10 +60,19 @@ in the environment which you chose in Anaconda is chosen.#
 Follow the instructions listed under "Adding a Run and Debug Configuration" [on this site](https://blog.miguelgrinberg.com/post/setting-up-a-flask-application-in-pycharm).
 In the end, your configuration file should like something like this:
 
-* You should then be able to choose Run --> Run and choose "server-flask", or whatever you titled your configuration. It should then look like the following image in PyCharm:
+![Configuration setup](doc/PyCharmFlaskSetup.png)
 
-You should also be able to see the site in the browser now: 
+* You should then be able to choose Run --> Run and choose "server-flask", or whatever you titled your configuration. 
+You should see something like this:
+
+![Server Output](doc/OutputRunning.png)
+
+And now, you should also be able to see the site in the browser: 
+
+![Browser view](doc/BrowserRunning.png) 
    
-
+If this is what you see, you are all done! 
+Open `server-flask/server.py` and look at various routes. 
+Try to open the various pages in the browser.  
  
 
