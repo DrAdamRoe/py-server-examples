@@ -37,7 +37,14 @@ WSGI is a specification for an application and server to communicate with one an
 This example uses the reference implementation of the WSGI specification which ships with Python, called `wsgiref`.
 While one would generally _not_ use a "raw" implementation as is done here, modern python frameworks are built using this standard.
 
-       
+#### server-flask 
+
+To run flask, first you will have to [install flask](http://flask.pocoo.org/docs/1.0/installation/#installation). 
+Using Anaconda and PyCharm, the easiest way forward is to: 
+* Choose a Python environment in Anaconda and install Flask
+* In PyCharm, open Preferences/Settings --> Project --> Project Interpreter, and makes sure that the version of python which is installed 
+in the environment which you chose in Anaconda is chosen.
+* In PyCharm, run server-flask/server.py.  
 
  
 
