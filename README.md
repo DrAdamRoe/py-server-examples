@@ -43,8 +43,16 @@ To run flask, first you will have to [install flask](http://flask.pocoo.org/docs
 Using Anaconda and PyCharm, the easiest way forward is to: 
 * Choose a Python environment in Anaconda and install Flask
 * In PyCharm, open Preferences/Settings --> Project --> Project Interpreter, and makes sure that the version of python which is installed 
-in the environment which you chose in Anaconda is chosen.
-* In PyCharm, run server-flask/server.py.  
+in the environment which you chose in Anaconda is chosen.#
+* To check that Flask is installed correctly and working, Open the Python Console in PyCharm. type `import flask`. If no errors occur, you are on the right path. 
+* With the file `server-flask/server.py` open, select Run --> Edit Configurations. 
+Follow the instructions listed under "Adding a Run and Debug Configuration" [on this site](https://blog.miguelgrinberg.com/post/setting-up-a-flask-application-in-pycharm).
+In the end, your configuration file should like something like this:
+
+* You should then be able to choose Run --> Run and choose "server-flask", or whatever you titled your configuration. It should then look like the following image in PyCharm:
+
+You should also be able to see the site in the browser now: 
+   
 
  
 

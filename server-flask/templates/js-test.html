@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script>
+        function changeText(){
+            document.getElementById('id-p1').innerText = 'You just used Javascript to do client-side rendering!'
+        }
+    </script>
 </head>
 <html>
 <body>
-<h1>This is a test showing styling using CSS</h1>
-<p>Hello, CSS.</p>
+<h1>This is a test showing client-side Javascript</h1>
+<p id="id-p1">Hello, SummerCamp </p>
+
+<button type="button" onclick=changeText()> I'm a button, click me. </button>
+
 </body>
 </html>
