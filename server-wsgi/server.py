@@ -12,7 +12,7 @@ def simple_app(_environ, start_response):
     start_response(status, headers)
 
     # HTML body to be rendered
-    body = [("hello, WSGI server").encode("utf-8")]
+    body = ["hello, WSGI server".encode("utf-8")]
 
     return body
 
