@@ -3,7 +3,7 @@
 from wsgiref.simple_server import make_server
 
 
-def simple_app(environ, start_response):
+def simple_app(_environ, start_response):
 
     # set status and HTTP header for response, both needed.
     status = '200 OK'
