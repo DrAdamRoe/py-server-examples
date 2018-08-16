@@ -14,7 +14,7 @@ In order to enable the framework, some setup is required, as described in the st
 To run `server-flask`, first you will have to install flask. Using Anaconda and PyCharm, the easiest way forward is to: 
 * Choose a Python environment in Anaconda and install Flask
 * In PyCharm, open Preferences/Settings --> Project --> Project Interpreter, and makes sure that the version of python which is installed 
-in the environment which you chose in Anaconda is chosen.#
+in the environment which you chose in Anaconda is chosen.
 * To check that Flask is installed correctly and working, Open the Python Console in PyCharm. type `import flask`. If no errors occur, you are on the right path. 
 * With the file `server-flask/server.py` open, select Run --> Edit Configurations. 
 Follow the instructions listed under "Adding a Run and Debug Configuration" [on this site](https://blog.miguelgrinberg.com/post/setting-up-a-flask-application-in-pycharm).
