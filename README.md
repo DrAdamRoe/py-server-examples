@@ -11,8 +11,7 @@ represents the entirety of a "hello world" with flask. Behind the scenes, it is 
 the work which has to be done by hand in the other server versions. 
 In order to enable the framework, some setup is required, as described in the steps below.  
 
-To run `server-flask`, first you will have to [install flask](http://flask.pocoo.org/docs/1.0/installation/#installation). 
-Using Anaconda and PyCharm, the easiest way forward is to: 
+To run `server-flask`, first you will have to install flask. Using Anaconda and PyCharm, the easiest way forward is to: 
 * Choose a Python environment in Anaconda and install Flask
 * In PyCharm, open Preferences/Settings --> Project --> Project Interpreter, and makes sure that the version of python which is installed 
 in the environment which you chose in Anaconda is chosen.#
